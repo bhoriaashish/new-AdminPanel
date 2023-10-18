@@ -1,0 +1,352 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #73767aa0;
+  color: #9e9ea4;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.icon {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 20px;
+}
+.icon_header {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 26px;
+}
+.icon, .icon_header {
+  margin-right: 5px;
+}
+
+.close_icon {
+  color: red;
+  margin-left: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: flex;
+  /* grid-template-columns:  1.2fr 6fr;
+  grid-template-areas:
+    'sidebar header header header'
+    'sidebar main main main'; */
+  height: 100vh;
+}
+
+/* Header  */
+.header {
+  grid-area: header;
+  height: 60px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: end;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0);
+}
+.search_bar {
+  height: 43px;
+  min-width: 200px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background-color: #f5f5f6;
+  padding-left: 5px;
+}
+.search_input{
+  color: #696e79;
+background-color: #f5f5f6;
+flex-grow: 1;
+height: 40px;
+border: 0;
+border-radius: 0 4px 4px 0;
+}
+.header-right {
+  text-align: end;
+}
+
+.menu-icon {
+  display: none;
+}
+/* End Header  */
+
+/* Sidebar  */
+#sidebar {
+  display: flex;
+  width: 15%;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;
+  background-color: midnightblue;
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 15px 30px 0px 30px; */
+  margin-bottom: 40px;
+}
+
+.sidebar-title > span {
+  display: none;
+}
+
+.sidebar-brand {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar-list {
+  padding: 0;
+  height: 75%;
+  list-style-type: none;
+}
+
+.sidebar-list-item {
+  padding: 13px 20px 13px 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.sidebar-last-item {
+  padding: 13px 20px 13px 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.sidebar-last-item:hover {
+  background-color: darkslateblue;
+  cursor: pointer;
+}
+
+.sidebar-list-item:hover {
+  background-color: darkslateblue;
+  cursor: pointer;
+}
+
+.sidebar-list-item > a {
+  text-decoration: none;
+  color: #9e9ea4;
+}
+
+.sidebar-last-item {
+  justify-content: end;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  /*
+    we want the z-index of the sidebar higher so that
+    the charts are not showing over the sidebar 
+    on small screens
+  */
+  z-index: 12 !important;
+}
+
+/* End Sidebar  */
+
+
+/* Main  */  
+.main-container {
+  grid-area: main;
+  overflow-y: auto;
+  padding: 20px 20px;
+  width: 85%;
+  background-color: lightgrey;
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.logo {
+  width: 10rem;
+
+}
+.profit,
+.percent{
+  font-size: 10px;
+
+}
+.percent span{
+  color: green;
+}
+.matter {
+  display: block;
+  font-size: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.card:first-child {
+  background-color: floralwhite;
+  color: black;
+  font-size: 35px;
+  flex-wrap: wrap;
+}
+
+.card:nth-child(2) {
+  background-color: floralwhite;
+  color: black;
+}
+.book {
+  width: 7rem;
+
+}
+.earning, .quantity, .recept, .range {
+  display: block;
+  font-size: 13px;
+  color: darkgrey;
+
+}
+.down-percent span{
+  color: rgb(225, 12, 69);
+}
+.down-price {
+  display: block;
+  font-size: 20px;
+}
+
+
+.card:nth-child(3) {
+  background-color: floralwhite;
+  color: black;
+}
+.amount {
+  width: 10rem;
+
+}
+.recept,
+.down-money{
+  font-size: 10px;
+
+}
+.down-money span{
+  color: rgb(225, 12, 69);
+}
+.down-end {
+  display: block;
+  font-size: 20px;
+}
+.balance-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.card:nth-child(4) {
+  background-color: floralwhite;
+  color: black;
+}
+.scale {
+  width: 10rem;
+
+}
+.range,
+.up-money{
+  font-size: 10px;
+
+}
+.up-money span{
+  color: rgb(225, 12, 69);
+}
+
+
+.card-inner {
+  display: flex;
+  align-items: center;
+}
+
+.card-inner > .card_icon {
+  font-size: 20px;
+}
+
+.card-inner-right {
+  display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 60px;
+  height: 300px;
+  padding: 15px;
+}
+
+/* End Main  */
+
+
+/* Medium <= 992px */
+  
+@media screen and (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'header'
+      'main';
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+
+  .sidebar-title > span {
+    display: inline;
+  }
+}
+/* Small <= 768px */
+  
+@media screen and (max-width: 768px) {
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}
+
+/* Extra Small <= 576px */
+
+@media screen and (max-width: 576px) {
+  .hedaer-left {
+    display: none;
+  }
+}
